@@ -5,7 +5,7 @@ Install:
   pip install requests
 
 Run:
-  python update_code.py
+  python update_code.pys
 """
 
 import base64

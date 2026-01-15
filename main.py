@@ -17,7 +17,7 @@ import requests
 # ---- CONFIG (edit these) ----
 GITHUB_TOKEN = "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"  # <-- paste your token locally (do NOT commit this)
 OWNER = "dasdsa0d8s9a"
-REPO = "dsadsadsadsadasdsa"
+REPO = "hamidsadsadasdsadsa"
 FILE_PATH = "index.html"
 BRANCH = "main"  # change if your default branch differs (e.g., "master")
 FETCH_URL = "https://seller.kuajingmaihuo.com/bg/quiet/api/auth/obtainCode"

